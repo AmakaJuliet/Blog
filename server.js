@@ -12,8 +12,8 @@ const port = 3000;
 
 const prisma = new PrismaClient();
 
-app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/post", postRouter)
+app.use("/auth", authRouter);
+app.use("/posts", postRouter)
 
 
 app.listen(port, () => console.log(`app listening on port ${port}`))

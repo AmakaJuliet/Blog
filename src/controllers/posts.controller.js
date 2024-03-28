@@ -102,13 +102,17 @@ async function fetchPost(req, res, next) {
       });
     }
 
-    return res.json({
+    return res
+     .status(200)
+     .json({
       message: "Post",
       success: true,
       post: post,
     });
   } catch (error) {
-    return res.json({
+    return res
+     .status(500)
+     .json({
       success: false,
       message: `An error occurred while fetching post with id ${id}: ${error.message}`,
       error: error,
@@ -163,7 +167,7 @@ async function updatePost(req, res, next) {
       });
   } catch (error) {
     return res
-      .status(400)
+      .status(500)
       .json({
         success: false,
         message: "There was an error",
@@ -207,9 +211,13 @@ async function deletePost(req, res, next) {
       },
     });
 
-    return res.json({ message: "Post deleted", success: true, deleted: true });
+    return res
+      .status(200)
+      .json({ message: "Post deleted", success: true, deleted: true });
   } catch (error) {
-    return res.json({
+    return res
+     .status(500)
+     .json({
       success: false,
       message: `An error occurred while deleting post with id ${id}: ${error.message}`,
       error: error,

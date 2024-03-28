@@ -57,14 +57,14 @@ This is the backend component of a simple blog site project built with Express.j
 The following endpoints are available:
 
 - **Authentication**:
-  - `POST /api/v1/auth/createUser`: Register a new user.
-  - `POST /api/v1/auth/login`: Login with existing credentials.
+  - `POST /auth/createUser`: Register a new user.
+  - `POST /auth/login`: Login with existing credentials.
 - **Blog Posts**:
-  - `GET /api/v1/all`: Get all blog posts.
-  - `GET /api/v1/post/:id`: Get a specific blog post by ID.
-  - `POST /api/v1/create`: Create a new blog post.
-  - `PUT /api/v1/update/:id`: Update an existing blog post by ID.
-  - `DELETE /api/delete/:id`: Delete a blog post by ID.
+  - `GET /posts`: Get all blog posts.
+  - `GET /posts/:id`: Get a specific blog post by ID.
+  - `POST /posts`: Create a new blog post.
+  - `PUT /posts/:id`: Update an existing blog post by ID.
+  - `DELETE /posts/:id`: Delete a blog post by ID.
 
 ## Technologies Used
 
